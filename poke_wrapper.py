@@ -19,8 +19,8 @@ class Pokemon:
         ret_str = f"""
 Here is some info about {self.name}!
 Id: {self.id}
-Height: {self.height * 0.1} meters
-Weight: {self.weight * 0.1} kilograms
+Height: {self.height * 0.1:.1f} meters
+Weight: {self.weight * 0.1:.1f} kilograms
 Description: {self.flavor}
 """
         return ret_str

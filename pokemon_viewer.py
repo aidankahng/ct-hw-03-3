@@ -16,7 +16,8 @@ def main():
             if pokemon:
                 poke = pokedex.lookup(pokemon)
                 if poke:
+                    print(poke)
                     engine.say(str(poke))
                     engine.runAndWait()
-                    print(poke)
+                    
 main()

@@ -1,6 +1,10 @@
 from poke_wrapper import PokeAPI
+import pyttsx3
     
 def main():
+
+    engine = pyttsx3.init()
+    engine.setProperty('rate', 150)
     print("Welcome to your pokedex!\nI can tell you information about pokemon.\n")
     pokedex = PokeAPI()
     while True:
@@ -12,5 +16,7 @@ def main():
             if pokemon:
                 poke = pokedex.lookup(pokemon)
                 if poke:
+                    engine.say(str(poke))
+                    engine.runAndWait()
                     print(poke)
 main()
